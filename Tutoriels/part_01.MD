@@ -1,7 +1,7 @@
 
 # SOKOBAN vs POO / Partie 1 : les bases
 
-v0.0.2
+v0.0.3
 
 Bonjour,
 
@@ -124,6 +124,16 @@ Le MVC est un modèle d'architecture, cela sert à décrire comment le code doit êt
 * la vue : qui gère l'affichage ;
 * et le contrôleur : qui fait l'interface entre la vue et le modèle.
 
+Dans votre programme principale vous devez avoir unique des interactions avec le/les contrôleur(s).
+
+De plus, imaginé que vous souhaitez faire un portage de votre programme vers un autre terminal (sur ordinateur, par exemple) et bien dans ce cas vous n'avez que la couche vue à modifier, voilà un intérêt du MVC.
+
+Encore un avantage du MVC, la résolution de bugs :
+* si vous rencontrez un bug de comportement de vos données alors inspectez la couche modèle.
+* si vous rencontrez un bug d'affichage alors inspectez la couche vue.
+* si vous rencontrez un bug d'interactions alors inspectez la couche contrôleur.
+Pour un petit programme le découpage peut-être lourd mais voyez les avantages que cela apporte.
+
 Un concept important dans la POO est la classe. Une classe est une structure de donnée qui a :
 * des attributs : les variables de la classe ;
 * des méthodes : les fonctions de la classe.
@@ -174,6 +184,8 @@ Remarque : Faites attention au point-virgule à la fin des classes, sans ce point
 
 De plus, une chose très importante : les attributs doivent être privés. Il s'agit de l'encapsulation, un concept de la POO, qui veut que l'on interdit l'accès au attributs de classes depuis l'extérieur. Les méthodes sont en revanche publique ce qui permet de les utiliser dans le programme principale par exemple.
 
+Enfin, la déclaration se place dans un fichier *.h* (pour header, Plan.h).
+
 **Le constructeur**
 
 Plusieurs choses doivent être dites à son sujet :
@@ -197,6 +209,8 @@ Le C++ a un petit sucre syntaxique qui permet de faire la même chose de la manni
 Remarque : toutes méthodes dont le constructeur doivent préfixé par le nom de la classe, ici : *Plan::*.
 
 La méthode *dessiner* est composée d'une boucle qui itére sur le nombre de pièces et le reste du code je le laisse pour votre imagination.
+
+La définition se place dans un fichier *.cpp* (Plan.cpp pour notre exemple).
 
 3. Instanciation et utilisation
 
@@ -238,7 +252,9 @@ Pour vous guider voici un diagramme de classes (fait en UML) qui représente notr
 
 Si vous n'y arrivez pas, n'ayez crainte vous pouvez télécharger la [version orientée objet](https://github.com/chris-scientist/gb-sample/archive/v2.0.zip) que j'ai fait.
 
-Remarque : la vue n'a pas de constructeur du moins nous n'en n'avons pas déclaré. Nous utilisons le constructeur par défaut.
+Remarques :
+* La vue n'a pas de constructeur du moins nous n'en n'avons pas déclaré. Nous utilisons le constructeur par défaut.
+* Il s'agit ici d'un petit exemple avec peu de classes, imaginé que vous ayez un [Rubik's cube](https://gamebuino.com/creations/jeu-rubik-s-cube) à développé l'intérêt du MVC est alors non négligeable.
 
 Enfin des améliorations sont possibles, effectivement il devrait être interdit d'instancier plusieurs personnages (imaginé le désordre que ça engendrerai !). *Ne lisez la suite que si vous voulez avoir mal de tête* ;). Pour faire cela nous pourrions utiliser le design pattern Singleton, mais ce n'est pas l'objectif de ce cours.
 
