@@ -9,7 +9,7 @@ Bonjour,
 
 Non... POO n'est pas un ennemi !
 
-Vous voici dans un tutoriel pour réaliser le jeu SOKOBAN en **Programmation Orientée Objet** c'est-à-dire POO. Dans ce tutoriel il paraît même que nous parlerons du modèle d'architecture **Modèle Vue Contrôleur** c'est-à-dire MVC. Le programme est ambitieux mais ne vous en faites aucune crainte, nous avancerons pas à pas et je vais essayer d'être clair.  
+Vous voici dans un tutoriel pour réaliser le jeu SOKOBAN en **Programmation Orientée Objet** c'est-à-dire POO. Dans ce tutoriel il paraît même que nous parlerons du modèle d'architecture **Modèle Vue Contrôleur** c'est-à-dire MVC. Le programme est ambitieux mais ne vous faites aucune crainte, nous avancerons pas à pas et je vais essayer d'être clair.  
 
 Le tutoriel sera composé des 4 parties suivantes :
 * La partie 1 (vous êtes ici ! en cours de rédaction) : vous permettra d'appréhender les bases de la POO et du MVC.
