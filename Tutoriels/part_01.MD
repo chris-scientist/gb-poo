@@ -1,7 +1,7 @@
 
 # SOKOBAN vs POO / Partie 1 : les bases
 
-v0.0.1
+v0.0.2
 
 Bonjour,
 
@@ -241,8 +241,6 @@ Si vous n'y arrivez pas, n'ayez crainte vous pouvez télécharger la [version orie
 Remarque : la vue n'a pas de constructeur du moins nous n'en n'avons pas déclaré. Nous utilisons le constructeur par défaut.
 
 Enfin des améliorations sont possibles, effectivement il devrait être interdit d'instancier plusieurs personnages (imaginé le désordre que ça engendrerai !). *Ne lisez la suite que si vous voulez avoir mal de tête* ;). Pour faire cela nous pourrions utiliser le design pattern Singleton, mais ce n'est pas l'objectif de ce cours.
-
-*La suite de ce chapitre arrive, merci de votre patience !*
 
 ## PRATIQUE
 
