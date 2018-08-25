@@ -1,7 +1,7 @@
 
 # SOKOBAN vs POO / Partie 1 : les bases
 
-v0.0.3
+v0.0.4
 
 Bonjour,
 
@@ -140,6 +140,8 @@ Un concept important dans la POO est la classe. Une classe est une structure de 
 
 ******
 
+*Faisons un point sur les classes.*
+
 Voici un exemple de classe C++ :
 
     // 1) Déclaration
@@ -206,7 +208,7 @@ Le C++ a un petit sucre syntaxique qui permet de faire la même chose de la manni
 	    
 	}
 
-Remarque : toutes méthodes dont le constructeur doivent préfixé par le nom de la classe, ici : *Plan::*.
+Remarque : toutes méthodes dont le constructeur doivent être préfixé par le nom de la classe, ici : *Plan::*.
 
 La méthode *dessiner* est composée d'une boucle qui itére sur le nombre de pièces et le reste du code je le laisse pour votre imagination.
 
@@ -214,7 +216,7 @@ La définition se place dans un fichier *.cpp* (Plan.cpp pour notre exemple).
 
 3. Instanciation et utilisation
 
-Lorsque qu'on créé un objet à partir d'une classe on dit qu'on *instancie* un objet. Cet objet est une instance autrement dit c'est une maison alors que la classe est un plan. On créé ici un pointeur de Plan, en effet le type est *"Plan *"*. Ainsi pour instancier l'objet il faut faire appel au mot-clé C++ "new".
+Lorsque qu'on créé un objet à partir d'une classe on dit qu'on *instancie* un objet. Cet objet est une instance autrement dit c'est une maison alors que la classe est un plan. On créé ici un pointeur de Plan, en effet le type est "Plan *". Ainsi pour instancier l'objet il faut faire appel au mot-clé C++ "new". Le "2" passé au construteur c'est le nombre de pièces de notre maison.
 
 Enfin pour appeler une méthode (sur un pointeur) il faut utiliser le symbole suivant : "->" (ici : maMaison->dessiner()).
 
@@ -226,7 +228,7 @@ Une représentation UML via un diagramme de classes est possible est le voici :
 
 Remarques : 
 * Le *moins* avant l'attribut signifie qu'il est privé.
-* Le *plus* avant les méthodes signifie qu'elle sont publiques.
+* Le *plus* avant les méthodes signifie qu'elles sont publiques.
 * La modélisation n'est pas complète, il manque effectivement le paramètre du constructeur.
 
 
@@ -244,7 +246,7 @@ Comme vous le voyez par convention :
 * La vue est suffixé par *View*.
 * Le contrôleur est suffixé par *Controller*.
 
-Comme vous savez créé des classe, avant de passer à la réalisation du SOKOBAN, vous pouvez essayer de réaliser une version orienté objet qui respecte le MVC de notre exemple, ne réinventez pas tout vous pouvez en effet vous inspirez de la version procédurale.
+Comme vous savez créer des classe, avant de passer à la réalisation du SOKOBAN, vous pouvez essayer de réaliser une version orienté objet qui respecte le MVC de notre exemple, ne réinventez pas tout vous pouvez en effet vous inspirez de la version procédurale.
 
 Pour vous guider voici un diagramme de classes (fait en UML) qui représente notre petit programme avec toutes les classes et méthodes nécessaires :
 
@@ -254,7 +256,7 @@ Si vous n'y arrivez pas, n'ayez crainte vous pouvez télécharger la [version orie
 
 Remarques :
 * La vue n'a pas de constructeur du moins nous n'en n'avons pas déclaré. Nous utilisons le constructeur par défaut.
-* Il s'agit ici d'un petit exemple avec peu de classes, imaginé que vous ayez un [Rubik's cube](https://gamebuino.com/creations/jeu-rubik-s-cube) à développé l'intérêt du MVC est alors non négligeable.
+* Il s'agit ici d'un petit exemple avec peu de classes, imaginé que vous ayez un [Rubik's cube](https://gamebuino.com/creations/jeu-rubik-s-cube) à développer l'intérêt du MVC est alors non négligeable.
 
 Enfin des améliorations sont possibles, effectivement il devrait être interdit d'instancier plusieurs personnages (imaginé le désordre que ça engendrerai !). *Ne lisez la suite que si vous voulez avoir mal de tête* ;). Pour faire cela nous pourrions utiliser le design pattern Singleton, mais ce n'est pas l'objectif de ce cours.
 
@@ -262,6 +264,6 @@ Enfin des améliorations sont possibles, effectivement il devrait être interdit d
 
 La pratique vous permettra de créer l'ensemble des classes et méthodes utiles au jeu SOKOBAN. Pour les méthodes nous ferrons juste la description, en effet, nous verrons la définition (le contenu) de chacune d'elle au fur et à mesure des parties qui composent ce tutoriel.
 
-Si vous ne vous sentez pas encore prêt à franchir le cap de la POO, il existe une version procédurale du jeu (cf.  partie 1 par jicehel).
+Si vous ne vous sentez pas encore prêt à franchir le cap de la POO, il existe une version procédurale du jeu SOKOBAN (cf.  [partie 1 par jicehel](https://gamebuino.com/creations/sokoban-partie-1-preparons-notre-jeu)).
 
 *Ce chapitre est en cours de rédaction, merci de votre patience !*
