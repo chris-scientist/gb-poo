@@ -3,8 +3,8 @@
 
 Version 0.0.1
 
-Le code source est accompagné d'un tutoriels en 4 parties :
-* [Partie 1 : les bases](part_01.MD) *en cours de rédaction*
-* Partie 2 : affichage et caméra *à rédiger*
-* Partie 3 : le personnage *à rédiger*
-* Partie 4 : physique et partie *à rédiger*
+Le code source est accompagné d'un tutoriel en 4 parties :
+* [Partie 1 : les bases](Tutoriels/part_01.MD) (*en cours de rédaction*)
+* Partie 2 : affichage et caméra (*à rédiger*)
+* Partie 3 : le personnage (*à rédiger*)
+* Partie 4 : physique et partie (*à rédiger*)
