@@ -1,7 +1,7 @@
 
 # SOKOBAN vs POO / Partie 1 : les bases
 
-v0.0.4
+v0.0.5
 
 Bonjour,
 
@@ -124,9 +124,9 @@ Le MVC est un modèle d'architecture, cela sert à décrire comment le code doit êt
 * la vue : qui gère l'affichage ;
 * et le contrôleur : qui fait l'interface entre la vue et le modèle.
 
-Dans votre programme principale vous devez avoir unique des interactions avec le/les contrôleur(s).
+Dans votre programme principale vous devez avoir uniquement des interactions avec le/les contrôleur(s).
 
-De plus, imaginé que vous souhaitez faire un portage de votre programme vers un autre terminal (sur ordinateur, par exemple) et bien dans ce cas vous n'avez que la couche vue à modifier, voilà un intérêt du MVC.
+De plus, imaginez que vous souhaitez faire un portage de votre programme vers un autre terminal (sur ordinateur, par exemple) et bien dans ce cas vous n'avez que la couche vue à modifier, voilà un intérêt du MVC.
 
 Encore un avantage du MVC, la résolution de bugs :
 * si vous rencontrez un bug de comportement de vos données alors inspectez la couche modèle.
