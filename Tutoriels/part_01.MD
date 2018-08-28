@@ -1,9 +1,7 @@
 
 # SOKOBAN vs POO / Partie 1 : les bases
 
-v0.0.5
-
-Bonjour,
+v0.0.6
 
 ## SOKOBAN CONTRE POO ?
 
@@ -50,7 +48,7 @@ Le personnage sera représenté par un "x".
 
 Voici le code de la version procédurale de ce petit programme ([téléchargeable ici](https://github.com/chris-scientist/gb-sample/archive/v1.0.zip)).
 
-    #include <Gamebuino-Meta.h>
+    // TODO inclure la bibliothèque Gamebuino META
 
     // position du personnage
     int xCharacter;
@@ -202,7 +200,7 @@ La définition du constructeur est particulière, en effet dans beaucoup de langag
 	    nbPieces = unNbPieces;
 	}
 
-Le C++ a un petit sucre syntaxique qui permet de faire la même chose de la mannière suivante :
+Le C++ a un petit sucre syntaxique qui permet de faire la même chose de la manière suivante :
 
     Plan::Plan(int unNbPieces) : nbPieces(unNbPieces) {
 	    
@@ -210,7 +208,7 @@ Le C++ a un petit sucre syntaxique qui permet de faire la même chose de la manni
 
 Remarque : toutes méthodes dont le constructeur doivent être préfixé par le nom de la classe, ici : *Plan::*.
 
-La méthode *dessiner* est composée d'une boucle qui itére sur le nombre de pièces et le reste du code je le laisse pour votre imagination.
+La méthode *dessiner* est composée d'une boucle qui itère sur le nombre de pièces et le reste du code je le laisse pour votre imagination.
 
 La définition se place dans un fichier *.cpp* (Plan.cpp pour notre exemple).
 
@@ -250,7 +248,7 @@ Comme vous savez créer des classe, avant de passer à la réalisation du SOKOBAN, 
 
 Pour vous guider voici un diagramme de classes (fait en UML) qui représente notre petit programme avec toutes les classes et méthodes nécessaires :
 
-[Astuce : diagramme de classes](Images/diagramme_classes_exemple.png)
+[Astuce : diagramme de classes](Images/diagramme_classes_exemple_v0.0.2.png)
 
 Si vous n'y arrivez pas, n'ayez crainte vous pouvez télécharger la [version orientée objet](https://github.com/chris-scientist/gb-sample/archive/v2.0.zip) que j'ai fait.
 
@@ -266,4 +264,6 @@ La pratique vous permettra de créer l'ensemble des classes et méthodes utiles au
 
 Si vous ne vous sentez pas encore prêt à franchir le cap de la POO, il existe une version procédurale du jeu SOKOBAN (cf.  [partie 1 par jicehel](https://gamebuino.com/creations/sokoban-partie-1-preparons-notre-jeu)).
 
-*Ce chapitre est en cours de rédaction, merci de votre patience !*
+Dans la prochaine partie, c'est-à-dire la deuxième, nous réaliserons l'affichage du jeu et la gestion de la caméra.
+
+*Ce chapitre sur la "pratique" est en cours de rédaction, merci de votre patience !*
