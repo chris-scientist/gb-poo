@@ -16,5 +16,5 @@ void loop() {
   // effacer l'écran
   gb.display.clear();
 
-  gb.display.println("Hello world");
+  gb.display.println("v1.0.0"); // A SUPPRIMER
 }

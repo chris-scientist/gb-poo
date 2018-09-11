@@ -1,7 +1,7 @@
 
 # SOKOBAN vs POO / Partie 1 : les bases
 
-v0.1.0
+v0.1.1
 
 ## SOKOBAN CONTRE POO ?
 
@@ -10,7 +10,7 @@ Non... POO n'est pas un ennemi !
 Vous voici dans un tutoriel pour réaliser le jeu SOKOBAN en **Programmation Orientée Objet** c'est-à-dire POO. Dans ce tutoriel il paraît même que nous parlerons du modèle d'architecture **Modèle Vue Contrôleur** c'est-à-dire MVC. Le programme est ambitieux mais ne vous faites aucune crainte, nous avancerons pas à pas et je vais essayer d'être clair.  
 
 Le tutoriel sera composé des 4 parties suivantes :
-* La partie 1 (vous êtes ici ! en cours de rédaction) : vous permettra d'appréhender les bases de la POO et du MVC.
+* La partie 1 (vous êtes ici !) : vous permettra d'appréhender les bases de la POO et du MVC.
 * La partie 2 (à rédiger !) : vous permettra de réaliser l'affichage du jeu et la gestion de la caméra (évidement à la sauce POO, comme le reste des parties).
 * La partie 3 (à rédiger !) : vous permettra de gérer les déplacements du personnage.
 * La partie 4 (à rédiger !) : vous permettra de gérer la physique du jeu et la fin de partie.
@@ -130,6 +130,7 @@ Encore un avantage du MVC, la résolution de bugs :
 * si vous rencontrez un bug de comportement de vos données alors inspectez la couche modèle.
 * si vous rencontrez un bug d'affichage alors inspectez la couche vue.
 * si vous rencontrez un bug d'interactions alors inspectez la couche contrôleur.
+
 Pour un petit programme le découpage peut-être lourd mais voyez les avantages que cela apporte.
 
 Un concept important dans la POO est la classe. Une classe est une structure de donnée qui a :
@@ -244,7 +245,7 @@ Comme vous le voyez par convention :
 * La vue est suffixée par *View*.
 * Le contrôleur est suffixé par *Controller*.
 
-Comme vous savez créer des classe, avant de passer à la réalisation du SOKOBAN, vous pouvez essayer de réaliser une version orienté objet qui respecte le MVC de notre exemple, ne réinventez pas tout vous pouvez en effet vous inspirez de la version procédurale.
+Comme vous savez créer des classes, avant de passer à la réalisation du SOKOBAN, vous pouvez essayer de réaliser une version orienté objet qui respecte le MVC de notre exemple, ne réinventez pas tout vous pouvez en effet vous inspirer de la version procédurale.
 
 Pour vous guider voici un diagramme de classes (fait en UML) qui représente notre petit programme avec toutes les classes et méthodes nécessaires :
 
@@ -264,7 +265,7 @@ La pratique vous permettra de créer l'ensemble des classes et méthodes utiles au
 
 Si vous ne vous sentez pas encore prêt à franchir le cap de la POO, il existe une version procédurale du jeu SOKOBAN (cf.  [partie 1 par jicehel](https://gamebuino.com/creations/sokoban-partie-1-preparons-notre-jeu)).
 
-Je vous invite à télécharger le code source qui vous servira de base au programme, vous le trouverez ici.
+Je vous invite à télécharger le code source qui vous servira de base au programme, vous le trouverez [ici](https://github.com/chris-scientist/gb-poo/archive/v0.0.1.zip).
 
 Voici le  diagramme de classes du code que vous devez écrire :
 [Diagramme de classes Sokoban](Images/diagramme_classes_sokoban_v0.0.1.png)
