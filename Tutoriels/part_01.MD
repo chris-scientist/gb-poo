@@ -1,7 +1,7 @@
 
 # SOKOBAN vs POO / Partie 1 : les bases
 
-v0.1.1
+v0.1.2
 
 ## SOKOBAN CONTRE POO ?
 
@@ -400,7 +400,7 @@ Plusieurs remarques :
 
 Vous avez désormais toutes les cartes en main pour écrire les bases du Sokoban en orienté objet.
 
-Si vous avez terminé ou si vous rencontrez des problèmes vous pouvez télécharger la solution ici.
+Si vous avez terminé ou si vous rencontrez des problèmes vous pouvez télécharger la solution [ici](https://github.com/chris-scientist/gb-poo/archive/v1.0.0.zip).
 
 Dans la prochaine partie, c'est-à-dire la deuxième, nous réaliserons l'affichage du jeu et la gestion de la caméra.
 
