@@ -1,7 +1,7 @@
 
 # SOKOBAN vs POO / Partie 1 : les bases
 
-v0.0.8
+v0.1.0
 
 ## SOKOBAN CONTRE POO ?
 
@@ -264,6 +264,142 @@ La pratique vous permettra de créer l'ensemble des classes et méthodes utiles au
 
 Si vous ne vous sentez pas encore prêt à franchir le cap de la POO, il existe une version procédurale du jeu SOKOBAN (cf.  [partie 1 par jicehel](https://gamebuino.com/creations/sokoban-partie-1-preparons-notre-jeu)).
 
+Je vous invite à télécharger le code source qui vous servira de base au programme, vous le trouverez ici.
+
+Voici le  diagramme de classes du code que vous devez écrire :
+[Diagramme de classes Sokoban](Images/diagramme_classes_sokoban_v0.0.1.png)
+
+Remarques :
+* Les membres (attributs et méthodes), qui sont soulignés, représentent des membres de classe, autrement dit statique (on en reparle plus loin).
+* Je donne par la suite la description (type de retour et paramètres) des méthodes (je ne l'ai pas mis sur le diagramme afin de ne pas le surcharger).
+* Comme le montre le diagramme ci-dessus, vous pouvez adapter le MVC, par exemple pour une classe vous n'avez pas l'obligation d'écrire les 3 couches (c'est pourquoi il n'y a que le modèle de caméra).
+
+**Membre statique (ou membre de classe)**
+
+On définit par membre statique un membre appartenant à la classe. Par exemple, un attribut statique aura la même valeur pour chacune des instances de la classes. Si pour une classe donnée vous avez du code commun à toutes les instances vous pouvez alors l'écrire dans une méthode statique.
+
+### Définition des méthodes
+
+Remarques :
+* Si le type de retour n'est pas précisé c'est que la méthode ne retourne rien.
+* S'il on ne précise aucun attribut c'est que la méthode n'en a pas.
+* Pour les paramètres je fournis les noms.
+
+1. CameraModel
+* getNbSpritesInWidth : retourne un entier qu'on ne doit pas modifier.
+* getNbSpritesInHeight : retourne un entier qu'on ne doit pas modifier.
+* getCameraPositions : retourne un tableau d'entier, et prend deux entier qu'on ne doit pas modifier (aX et aY).
+
+2. CharacterController
+* moveBox : retourne un caractère qu'on ne doit pas modifier, et prend un caractère qu'on ne doit pas modifier (aReplacedSprites), ainsi que 4 entiers qu'on ne doit pas modifier (aX1, aY1, aX2 et aY2).
+* getPlayerSprites : retourne un caractère, et prend un caractère qu'on ne doit pas modifier (aReplacedSprites), de plus cette méthode ne doit pas modifier l'objet.
+* isWall : retourne un booléen qu'on ne doit pas modifier, et prend un caractère qu'on ne doit pas modifier (aReplacedSprites), de plus cette méthode ne doit pas modifier l'objet.
+* isBox : retourne un booléen qu'on ne doit pas modifier, et prend un caractère qu'on ne doit pas modifier (aReplacedSprites), de plus cette méthode ne doit pas modifier l'objet.
+* CharacterController : prend deux paramètre un CharacterModel et un MapModel.
+* getX : retourne un entier qu'on ne doit pas modifier, et cette méthode ne doit pas modifier l'objet.
+* getY : retourne un entier qu'on ne doit pas modifier, et cette méthode ne doit pas modifier l'objet.
+
+3. CharacterModel
+* CharacterModel : prend un tableau d'entier qu'on ne doit pas modifier (initPlayerPos).
+* getX : retourne un entier qu'on ne doit pas modifier, et cette méthode ne doit pas modifier l'objet.
+* getY : retourne un entier qu'on ne doit pas modifier, et cette méthode ne doit pas modifier l'objet.
+* getNextPos : retourne un tableau d'entier qu'on ne doit pas modifier, et cette méthode ne doit pas modifier l'objet.
+* getOldTypeOfSprites : retourne un caractère qu'on ne doit pas modifier, et cette méthode ne doit pas modifier l'objet.
+* setOldTypeOfSprites : prend un caractère qu'on ne doit pas modifier.
+
+4. MainController
+* MainController : prend un pointeur de MapController, un pointeur de CameraModel et un pointeur de CharacterController en paramètre (respectivement aMapController, aCameraModel et aCharacterController).
+
+5. MapController
+* MapController : prend un pointeur de MapModel et un pointeur de MapView en paramètre (respectivement aMapModel et aMapView).
+* getPlayerPositions : retourne un tableau d'entier qu'on ne doit pas modifier, et cette méthode ne doit pas modifier l'objet.
+* paint : prend un tableau d'entier qu'on ne doit pas modifier, et cette méthode ne doit pas modifier l'objet.
+* isEndOfGame : retourne un booléen, et cette méthode ne doit pas modifier l'objet.
+
+6. MapModel
+* getPlayerPositions : retourne un tableau d'entier qu'on ne doit pas modifier, et cette méthode ne doit pas modifier l'objet.
+* getTypeOfSprites : retourne un caractère qu'on ne doit pas modifier, et prend 2 entiers qu'on ne doit pas modifier (aXSprites et aYSprites).
+* setTypeOfSprites : prend 2 entiers qu'on ne doit pas modifier (aXSprites et aYSprites), et un caractère qu'on ne doit pas modifier (aTypeOfSprites).
+* isFinish : retourne un booléen, et cette méthode ne doit pas modifier l'objet.
+
+7. MapView
+* getSprites : retourne une référence d'Image, prend un caractère qu'on ne doit pas modifier (typeOfSprites), de plus cette méthodes ne doit pas modifier l'objet.
+* MapView : prend un pointeur de MapModel en paramètre (aMapModel).
+* paint : prend un tableau d'entier, et cette méthode ne doit pas modifier l'objet.
+
+8. SpritesManager
+* getArea : retourne une référence d'Image.
+* getBox : retourne une référence d'Image.
+* getBoxOnArea : retourne une référence d'Image.
+* getCharacter : retourne une référence d'Image.
+* getCharacterOnArea : retourne une référence d'Image.
+* getFloorImg : retourne une référence d'Image.
+* getWall : retourne une référence d'Image.
+
+******
+
+**Astuces**
+
+1. Méthode ne devant pas modifier l'objet
+
+On telle méthode s'écrit suivi par le mot-clé "const", comme dans l'exemple suivant :
+
+    class Voiture {
+	    public:
+		    void reviser() const;
+	};
+	
+	void Voiture::reviser() const {
+	
+	}
+
+Effectivement, il paraît absurde de modifier la voiture lorsqu'on la révise, en effet on n'a pas à modifier l'état de la voiture.
+
+2. Pointeur
+
+Voici un exemple d'une fonction qui prend en paramètre un pointeur de notre classe Voiture :
+
+    void detruire(Voiture * unPointeur) {
+	
+	}
+
+On dit que notre type est un pointeur grâce au mot-clé "*". Ainsi unPointeur est un pointeur de Voiture.
+
+3. Référence
+
+Voici un exemple de fonction qui retourne une référence de Voiture :
+
+    Voiture& construire() {
+	
+	}
+
+Le "&" signifie qu'on a une référence.
+
+4. Membres statiques
+
+Voici un exemple d'attribut statique et de méthode statique :
+
+    class Voiture {
+	    private:
+		    static int nbInstances;
+		public:
+		    static int getNbInstances();
+	};
+	
+	int Voiture::getNbInstances() {
+	    return Voiture::nbInstances;
+	}
+
+Plusieurs remarques :
+* Le mot-clé "static" permet de définir un membre statique (attribut ou méthode).
+* Lors de la définition d'une méthode de classe on ne reprécise pas qu'il s'agit d'un membre statique, vous l'avez en effet remarqué le mot-clé "static" n'est pas écrit (et ce n'est pas une faute).
+* Pour accéder à un attribut statique de MaClasse, il faut le préfixé par "MaClasse::".
+
+******
+
+Vous avez désormais toutes les cartes en main pour écrire les bases du Sokoban en orienté objet.
+
+Si vous avez terminé ou si vous rencontrez des problèmes vous pouvez télécharger la solution ici.
+
 Dans la prochaine partie, c'est-à-dire la deuxième, nous réaliserons l'affichage du jeu et la gestion de la caméra.
 
-*Ce chapitre sur la "pratique" est en cours de rédaction, merci de votre patience !*
