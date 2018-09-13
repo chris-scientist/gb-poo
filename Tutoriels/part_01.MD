@@ -1,7 +1,7 @@
 
 # SOKOBAN vs POO / Partie 1 : les bases
 
-v0.1.2
+v0.1.3
 
 ## SOKOBAN CONTRE POO ?
 
@@ -9,11 +9,12 @@ Non... POO n'est pas un ennemi !
 
 Vous voici dans un tutoriel pour réaliser le jeu SOKOBAN en **Programmation Orientée Objet** c'est-à-dire POO. Dans ce tutoriel il paraît même que nous parlerons du modèle d'architecture **Modèle Vue Contrôleur** c'est-à-dire MVC. Le programme est ambitieux mais ne vous faites aucune crainte, nous avancerons pas à pas et je vais essayer d'être clair.  
 
-Le tutoriel sera composé des 4 parties suivantes :
+Le tutoriel sera composé des 5 parties suivantes :
 * La partie 1 (vous êtes ici !) : vous permettra d'appréhender les bases de la POO et du MVC.
-* La partie 2 (à rédiger !) : vous permettra de réaliser l'affichage du jeu et la gestion de la caméra (évidement à la sauce POO, comme le reste des parties).
-* La partie 3 (à rédiger !) : vous permettra de gérer les déplacements du personnage.
-* La partie 4 (à rédiger !) : vous permettra de gérer la physique du jeu et la fin de partie.
+* La [partie 2](part_02.MD) : vous permettra de réaliser la gestion de la caméra (évidement à la sauce POO, comme le reste des parties).
+* La partie 3 (à rédiger !) : vous permettra de gérer l'affichage du jeu.
+* La partie 4 (à rédiger!) : vous permettra de gérer les déplacements du personnage.
+* La partie 5 (à rédiger !) : vous permettra de gérer la physique du jeu et la fin de partie.
 
 Voici pour la présentation du tutoriel.
 
@@ -402,5 +403,4 @@ Vous avez désormais toutes les cartes en main pour écrire les bases du Sokoban e
 
 Si vous avez terminé ou si vous rencontrez des problèmes vous pouvez télécharger la solution [ici](https://github.com/chris-scientist/gb-poo/archive/v1.0.0.zip).
 
-Dans la prochaine partie, c'est-à-dire la deuxième, nous réaliserons l'affichage du jeu et la gestion de la caméra.
-
+Dans la [prochaine partie](part_02.MD), c'est-à-dire la deuxième, nous réaliserons la gestion de la caméra.
