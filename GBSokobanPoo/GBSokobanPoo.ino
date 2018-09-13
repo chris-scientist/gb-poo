@@ -4,9 +4,25 @@
 
 #include <Gamebuino-Meta.h>
 
+#include "MainController.h"
+#include "MapController.h"
+#include "MapModel.h"
+#include "MapView.h"
+#include "CameraModel.h"
+#include "CharacterController.h"
+#include "CharacterModel.h"
+
+MainController * mainController;
+MapModel * mapModel;
+MapController * mapController;
+
 void setup() {
   // initialiser la gamebuino
   gb.begin();
+  // initialision de l'application
+  mapModel = new MapModel();
+  mapController = new MapController(mapModel, new MapView(mapModel));
+  mainController = new MainController(mapController, new CameraModel(), new CharacterController(new CharacterModel(mapController->getPlayerPositions()), mapModel));
 }
 
 void loop() {
@@ -16,5 +32,5 @@ void loop() {
   // effacer l'écran
   gb.display.clear();
 
-  gb.display.println("v1.0.0"); // A SUPPRIMER
+  mainController->run();
 }
