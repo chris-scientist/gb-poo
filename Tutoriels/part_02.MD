@@ -1,11 +1,11 @@
 
-# SOKOBAN vs POO / Partie 2 : affichage et caméra
+# SOKOBAN vs POO / Partie 2 : caméra
 
-v0.0.3
+v0.0.4
 
 ## INTRODUCTION
 
-Dans la [première partie](https://gamebuino.com/creations/sokoban-vs-poo-partie-1-les-bases) nous avons créé les bases de notre programme. Nous allons voir dans cette deuxième partie la gestion de l'affichage et la gestion de la caméra.
+Dans la [première partie](https://gamebuino.com/creations/sokoban-vs-poo-partie-1-les-bases) nous avons créé les bases de notre programme. Nous allons voir dans cette deuxième partie la gestion de la caméra.
 
 Les **pré-requis** de ce tutoriel sont :
 * Avoir une Gamebuino META.
@@ -66,6 +66,8 @@ Si vous ne savez pas comment faire ou si vous voulez vérifier votre code voici c
             }
         }
     }
+
+Remarque : cette méthode n'est pas optimisée, effectivement elle continue à parcourir le reste de la carte, et ceci même après avoir trouvé le joueur.
 
 Il est nécessaire d'appeler cette méthode à l'initialisation du programme. Vous voyez où ? Oui c'est ça dans le constructeur de MapModel, comme ceci :
 
@@ -341,4 +343,6 @@ Compilez, le résultat obtenu devrait ressembler à :
 
 La gestion de la caméra est désormais écrite, amusez vous à déplacer le joueur sur la carte (le caractère '@') et relancez le programme pour constater que les coordonnées de la caméra sont modifiées.
 
-*Cette partie est en cours de rédaction, merci de votre patience !*
+Si vous avez terminé ou si vous rencontrez des problèmes vous pouvez télécharger la solution ici.
+
+Dans la prochaine partie, c'est-à-dire la troisième, nous réaliserons l'affichage du jeu.
