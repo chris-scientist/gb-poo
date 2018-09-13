@@ -1,7 +1,7 @@
 
 # SOKOBAN vs POO / Partie 2 : affichage et caméra
 
-v0.0.2
+v0.0.3
 
 ## INTRODUCTION
 
@@ -263,22 +263,22 @@ Pour vous guider dans l'écriture de la gestion de la caméra je vais vous fournir
 	
 	SI X0 en dehors de la carte ALORS
 	    X0 = 0
-		X1 = X0 + Nombre de sprites en largeur + 1
+        X1 = X0 + Nombre de sprites en largeur + 1
 	FIN SI
 	
 	SI Y0 en dehors de la carte ALORS
 	    Y0 = 0
-		Y1 = Y0 + Nombre de sprites en hauteur + 1
+        Y1 = Y0 + Nombre de sprites en hauteur + 1
 	FIN SI
     
 	SI X1 en dehors de la carte ALORS
 	    X1 = Largeur de la carte
-		X0 = X1 - Nombre de sprites en largeur
+        X0 = X1 - Nombre de sprites en largeur
 	FIN SI
     
 	SI Y1 en dehors de la carte ALORS
 	    Y1 = Hauteur de la carte
-		Y0 = Y1 - Nombre de sprites en hauteur
+        Y0 = Y1 - Nombre de sprites en hauteur
 	FIN SI
 
 Voici le code à écrire :
@@ -332,7 +332,7 @@ Enfin pour tester votre code dans MainController::run ajouter les deux lignes su
     gb.display.printf("Cam %d,%d : %d,%d", cameraPos[0], cameraPos[1], cameraPos[2], cameraPos[3]);
     gb.display.println("");
 
-Le résultat obtenu devrait ressembler à :
+Compilez, le résultat obtenu devrait ressembler à :
 
     v2.0.0
 	Player pos 11,8
