@@ -1,7 +1,7 @@
 
 # SOKOBAN vs POO / Partie 2 : caméra
 
-v0.0.4
+v0.1.0
 
 ## INTRODUCTION
 
@@ -343,6 +343,6 @@ Compilez, le résultat obtenu devrait ressembler à :
 
 La gestion de la caméra est désormais écrite, amusez vous à déplacer le joueur sur la carte (le caractère '@') et relancez le programme pour constater que les coordonnées de la caméra sont modifiées.
 
-Si vous avez terminé ou si vous rencontrez des problèmes vous pouvez télécharger la solution ici.
+Si vous avez terminé ou si vous rencontrez des problèmes vous pouvez télécharger la solution [ici](https://github.com/chris-scientist/gb-poo/archive/v2.0.0.zip).
 
 Dans la prochaine partie, c'est-à-dire la troisième, nous réaliserons l'affichage du jeu.
