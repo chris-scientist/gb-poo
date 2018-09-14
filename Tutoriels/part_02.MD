@@ -1,16 +1,16 @@
 
 # SOKOBAN vs POO / Partie 2 : caméra
 
-v0.1.0
+v0.1.1
 
 ## INTRODUCTION
 
-Dans la [première partie](https://gamebuino.com/creations/sokoban-vs-poo-partie-1-les-bases) nous avons créé les bases de notre programme. Nous allons voir dans cette deuxième partie la gestion de la caméra.
+Dans la [première partie](part_01.MD) nous avons créé les bases de notre programme. Nous allons voir dans cette deuxième partie la gestion de la caméra.
 
 Les **pré-requis** de ce tutoriel sont :
 * Avoir une Gamebuino META.
 * Avoir fait l'ensemble des ateliers.
-* Avoir réaliser la [première partie](https://gamebuino.com/creations/sokoban-vs-poo-partie-1-les-bases) de ce tutoriel.
+* Avoir réaliser la [première partie](part_01.MD) de ce tutoriel.
 
 Je vous invite à télécharger [le code](https://github.com/chris-scientist/gb-poo/archive/v1.0.0.zip) qui est le résultat de la première partie, ceci pour partir sur des bases communes.
 
@@ -346,3 +346,5 @@ La gestion de la caméra est désormais écrite, amusez vous à déplacer le joueur s
 Si vous avez terminé ou si vous rencontrez des problèmes vous pouvez télécharger la solution [ici](https://github.com/chris-scientist/gb-poo/archive/v2.0.0.zip).
 
 Dans la prochaine partie, c'est-à-dire la troisième, nous réaliserons l'affichage du jeu.
+
+N'hésitez pas à me faire un retour : les améliorations que vous apporteriez (un regard extérieur est toujours bienvenu), les fautes, etc.
