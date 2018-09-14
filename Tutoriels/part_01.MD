@@ -1,7 +1,7 @@
 
 # SOKOBAN vs POO / Partie 1 : les bases
 
-v0.1.3
+v0.1.4
 
 ## SOKOBAN CONTRE POO ?
 
@@ -404,3 +404,5 @@ Vous avez désormais toutes les cartes en main pour écrire les bases du Sokoban e
 Si vous avez terminé ou si vous rencontrez des problèmes vous pouvez télécharger la solution [ici](https://github.com/chris-scientist/gb-poo/archive/v1.0.0.zip).
 
 Dans la [prochaine partie](part_02.MD), c'est-à-dire la deuxième, nous réaliserons la gestion de la caméra.
+
+N'hésitez pas à me faire un retour : les améliorations que vous apporteriez (un regard extérieur est toujours bienvenu), les fautes, etc.
