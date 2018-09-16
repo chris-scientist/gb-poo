@@ -1,7 +1,7 @@
 
 # SOKOBAN vs POO / Partie 2 : caméra
 
-v0.1.1
+v0.1.2
 
 ## INTRODUCTION
 
@@ -345,6 +345,6 @@ La gestion de la caméra est désormais écrite, amusez vous à déplacer le joueur s
 
 Si vous avez terminé ou si vous rencontrez des problèmes vous pouvez télécharger la solution [ici](https://github.com/chris-scientist/gb-poo/archive/v2.0.0.zip).
 
-Dans la prochaine partie, c'est-à-dire la troisième, nous réaliserons l'affichage du jeu.
+Dans la [prochaine partie](part_03.MD), c'est-à-dire la troisième, nous réaliserons l'affichage du jeu.
 
 N'hésitez pas à me faire un retour : les améliorations que vous apporteriez (un regard extérieur est toujours bienvenu), les fautes, etc.
