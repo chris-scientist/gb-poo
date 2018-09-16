@@ -28,3 +28,8 @@ const int* MapModel::getPlayerPositions() const {
   return playerPositions;
 }
 
+// Récupérer le type de sprites en fonction de coordonnées X, Y
+const char MapModel::getTypeOfSprites(const int aXSprites, const int aYSprites) {
+  return mapOfGame[aYSprites][aXSprites];
+}
+
