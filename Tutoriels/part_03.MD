@@ -1,7 +1,7 @@
 
 # SOKOBAN vs POO / Partie 3 : affichage
 
-v0.0.1
+v0.0.2
 
 ## INTRODUCTION
 
@@ -10,7 +10,7 @@ Dans les parties précédentes nous avons vu les bases de notre programme ainsi qu
 Les **pré-requis** de ce tutoriel sont :
 * Avoir une Gamebuino META.
 * Avoir fait l'ensemble des ateliers.
-* Avoir réaliser la partie [1](part_01.MD) ainsi que la partie [2](part_02.MD) de ce tutoriel.
+* Avoir réaliser la [partie 1](part_01.MD) ainsi que la [partie 2](part_02.MD) de ce tutoriel.
 
 Je vous invite à télécharger [le code](https://github.com/chris-scientist/gb-poo/archive/v2.0.0.zip) qui est le résultat de la deuxième partie, ceci pour partir sur des bases communes.
 
@@ -25,7 +25,7 @@ Nous allons voir dans un premier temps la gestion et l'affichage des différents 
 * le joueur sur la zone de chargement ;
 * et le sol.
 
-Pour chaque sprites le principe est le même, il faut créer une fois l'image et la stocker en mémoire afin de l'utiliser durant toutes la vie de notre programme. Je vous montre avec l'image du mur et je vous laisserai faire avec les autres images. Rendez-vous dans SpritesManager.cpp, où nous allons y définir la méthode getWall.
+Pour chaque sprites le principe est le même, il faut créer une fois l'image et la stocker en mémoire afin de l'utiliser durant toute la vie de notre programme. Je vous montre avec l'image du mur et je vous laisserai faire avec les autres images. Rendez-vous dans SpritesManager.cpp, où nous allons y définir la méthode getWall.
 
 Voici le code :
 
@@ -51,7 +51,7 @@ Voici le code :
         return SpritesManager::wall;
     }
 
-Voici les les tableaux associés aux autres sprites :
+Voici les tableaux associés aux autres sprites :
 
     // Une caisse
     static const uint16_t boxData[] = {
@@ -173,7 +173,7 @@ Voici le code complet de la méthode getSprites :
         }
     }
 
-Nous allons tester l'affichage de nos sprites. Dans un premier temps vous pouvez commenter l'ensemble des lignes de debug créées jusqu'à maintenant, rappelez-vous il s'agit de ces qui affiche du texte. Une fois fait, dans la méthode paint de MapView écrivez le code pour afficher les sprites.
+Nous allons tester l'affichage de nos sprites. Dans un premier temps vous pouvez commenter l'ensemble des lignes de debug créées jusqu'à maintenant, rappelez-vous il s'agit de ces lignes qui affichent du texte. Une fois fait, dans la méthode paint de MapView écrivez le code pour afficher les sprites.
 
 Par exemple, pour afficher le mur en x, y voici ce que vous devez écrire :
 
@@ -195,3 +195,63 @@ Voici le code que j'ai écris pour obtenir un tel résultat :
         gb.display.drawImage(16, 16, getSprites(TypeOfSprites::FLOOR_TYPE));
         gb.display.drawImage(32, 16, getSprites(TypeOfSprites::BOX_ON_ZONE_TYPE));
     }
+
+## AFFICHER LA ZONE VISIBLE DE LA CARTE
+
+Dans un premier temps, nous allons afficher le caractère représentant le sprites, nous verrons ensuite comment afficher l'image correspondante.
+
+Il faut écrire dans MapModel la méthode qui pour les coordonnées X, Y retourne le caractère, il s'agit de la méthode getTypeOfSprites que voici :
+
+    const char MapModel::getTypeOfSprites(const int aXSprites, const int aYSprites) {
+        return mapOfGame[aYSprites][aXSprites];
+    }
+
+Voici le pseudo code qui affiche la partie visible de la carte, à écrire dans la méthode paint de MapView :
+
+    POUR y allant de Y0 à Y1 FAIRE
+        POUR x allant de X0 à X1 FAIRE
+            Afficher le caractère ayant pour coordonnées x, y
+        FIN POUR
+        Retourner à la ligne
+    FIN POUR
+
+Voici 2 astuces pour vous guider :
+
+    // Afficher le caractère '@'
+    gb.display.printf("%c", '@');
+    
+    // Retourner à la ligne
+	gb.display.println("");
+
+Voici le code à écrire :
+
+    void MapView::paint(const int* aCameraPos) const {
+        for(int y = aCameraPos[1] ; y < aCameraPos[3] ; y++) {
+            for(int x = aCameraPos[0] ; x < aCameraPos[2] ; x++) {
+                gb.display.printf("%c", mapModel->getTypeOfSprites(x, y));
+            }
+            gb.display.println("");
+        }
+    }
+
+Dans un second temps, vous pouvez maintenant afficher les images des sprites, voici le code à écrire :
+
+    void MapView::paint(const int* aCameraPos) const {
+        int l = 0;
+        for(int y = aCameraPos[1] ; y < aCameraPos[3] ; y++) {
+            int c = 0;
+            for(int x = aCameraPos[0] ; x < aCameraPos[2] ; x++) {
+                gb.display.drawImage(c*SpritesManager::WIDTH_SPRITES, l*SpritesManager::HEIGHT_SPRITES, getSprites(mapModel->getTypeOfSprites(x, y)));
+                c++;
+            }
+            l++;
+        }
+    }
+
+La gestion de l'affichage est désormais écrite, amusez vous à déplacer le joueur sur la carte (le caractère '@') et relancez le programme pour constater que l'affichage est différent.
+
+Si vous avez terminé ou si vous rencontrez des problèmes vous pouvez télécharger la solution ici.
+
+Dans la prochaine partie, c'est-à-dire la quatrième, nous réaliserons la gestion du personnage.
+
+N'hésitez pas à me faire un retour : les améliorations que vous apporteriez (un regard extérieur est toujours bienvenu), les fautes, etc.
