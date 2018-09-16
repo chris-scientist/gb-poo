@@ -1,7 +1,7 @@
 
 # SOKOBAN vs POO / Partie 3 : affichage
 
-v0.0.2
+v0.1.0
 
 ## INTRODUCTION
 
@@ -250,7 +250,7 @@ Dans un second temps, vous pouvez maintenant afficher les images des sprites, vo
 
 La gestion de l'affichage est désormais écrite, amusez vous à déplacer le joueur sur la carte (le caractère '@') et relancez le programme pour constater que l'affichage est différent.
 
-Si vous avez terminé ou si vous rencontrez des problèmes vous pouvez télécharger la solution ici.
+Si vous avez terminé ou si vous rencontrez des problèmes vous pouvez télécharger la solution [ici](https://github.com/chris-scientist/gb-poo/archive/v3.0.0.zip).
 
 Dans la prochaine partie, c'est-à-dire la quatrième, nous réaliserons la gestion du personnage.
 
