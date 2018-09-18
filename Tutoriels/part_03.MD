@@ -1,7 +1,7 @@
 
 # SOKOBAN vs POO / Partie 3 : affichage
 
-v0.1.0
+v0.1.1
 
 ## INTRODUCTION
 
@@ -252,6 +252,6 @@ La gestion de l'affichage est désormais écrite, amusez vous à déplacer le joueur
 
 Si vous avez terminé ou si vous rencontrez des problèmes vous pouvez télécharger la solution [ici](https://github.com/chris-scientist/gb-poo/archive/v3.0.0.zip).
 
-Dans la prochaine partie, c'est-à-dire la quatrième, nous réaliserons la gestion du personnage.
+Dans la [prochaine partie](part_04.MD), c'est-à-dire la quatrième, nous réaliserons la gestion du personnage.
 
 N'hésitez pas à me faire un retour : les améliorations que vous apporteriez (un regard extérieur est toujours bienvenu), les fautes, etc.
