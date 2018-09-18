@@ -12,6 +12,7 @@ void MainController::run() {
   //gb.display.println("v2.0.0"); // A SUPPRIMER
   //gb.display.printf("Player pos %d,%d", characterController->getX(), characterController->getY());
   //gb.display.println("");
+  characterController->run();
   const int* cameraPos = cameraModel->getCameraPositions(characterController->getX(), characterController->getY());
   //gb.display.printf("Cam %d,%d : %d,%d", cameraPos[0], cameraPos[1], cameraPos[2], cameraPos[3]);
   //gb.display.println("");

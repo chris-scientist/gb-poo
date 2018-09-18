@@ -33,3 +33,8 @@ const char MapModel::getTypeOfSprites(const int aXSprites, const int aYSprites) 
   return mapOfGame[aYSprites][aXSprites];
 }
 
+// Mettre à jour le type de sprites ayant pour coordonnées X, Y
+void MapModel::setTypeOfSprites(const int aXSprites, const int aYSprites, const char aTypeOfSprites) {
+  mapOfGame[aYSprites][aXSprites] = aTypeOfSprites;
+}
+
