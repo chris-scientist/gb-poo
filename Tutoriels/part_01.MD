@@ -1,7 +1,7 @@
 
 # SOKOBAN vs POO / Partie 1 : les bases
 
-v0.1.5
+v0.1.6
 
 ## SOKOBAN CONTRE POO ?
 
@@ -13,7 +13,7 @@ Le tutoriel sera composé des 5 parties suivantes :
 * La partie 1 (vous êtes ici !) : vous permettra d'appréhender les bases de la POO et du MVC.
 * La [partie 2](part_02.MD) : vous permettra de réaliser la gestion de la caméra (évidement à la sauce POO, comme le reste des parties).
 * La [partie 3](part_03.MD) : vous permettra de gérer l'affichage du jeu.
-* La partie 4 (à rédiger!) : vous permettra de gérer les déplacements du personnage.
+* La [partie 4](part_04.MD) : vous permettra de gérer les déplacements du personnage.
 * La partie 5 (à rédiger !) : vous permettra de gérer la physique du jeu et la fin de partie.
 
 Voici pour la présentation du tutoriel.
