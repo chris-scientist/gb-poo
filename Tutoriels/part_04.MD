@@ -1,7 +1,7 @@
 
 # SOKOBAN vs POO / Partie 4 : le personnage
 
-v0.0.2
+v0.1.0
 
 ## INTRODUCTION
 
@@ -220,7 +220,7 @@ Enfin dans MainController::run il faut faire un appel à la méthode que l'on vien
 
 Notre personnage est maintenant capable de se déplacer dans les limites de la carte à l'aide de la croix directionnelle.
 
-Si vous avez terminé ou si vous rencontrez des problèmes vous pouvez télécharger la solution ici.
+Si vous avez terminé ou si vous rencontrez des problèmes vous pouvez télécharger la solution [ici](https://github.com/chris-scientist/gb-poo/archive/v4.0.0.zip).
 
 Dans la prochaine partie, c'est-à-dire la cinquième et dernière, nous réaliserons la gestion de la physique ainsi que la fin de partie.
 
