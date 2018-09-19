@@ -8,4 +8,4 @@ Le code source est accompagné d'un tutoriel en 5 parties :
 * [Partie 2 : caméra](Tutoriels/part_02.MD)
 * [Partie 3 : affichage](Tutoriels/part_03.MD)
 * [Partie 4 : le personnage](Tutoriels/part_04.MD)
-* Partie 5 : physique et partie (*à rédiger*)
+* [Partie 5 : physique et partie](Tutoriels/part_05.MD)
