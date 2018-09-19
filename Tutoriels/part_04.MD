@@ -1,7 +1,7 @@
 
 # SOKOBAN vs POO / Partie 4 : le personnage
 
-v0.1.0
+v0.1.1
 
 ## INTRODUCTION
 
@@ -222,7 +222,7 @@ Notre personnage est maintenant capable de se déplacer dans les limites de la ca
 
 Si vous avez terminé ou si vous rencontrez des problèmes vous pouvez télécharger la solution [ici](https://github.com/chris-scientist/gb-poo/archive/v4.0.0.zip).
 
-Dans la prochaine partie, c'est-à-dire la cinquième et dernière, nous réaliserons la gestion de la physique ainsi que la fin de partie.
+Dans la [prochaine partie](part_05.MD), c'est-à-dire la cinquième et dernière, nous réaliserons la gestion de la physique ainsi que la fin de partie.
 
 N'hésitez pas à me faire un retour : les améliorations que vous apporteriez (un regard extérieur est toujours bienvenu), les fautes, etc.
 
