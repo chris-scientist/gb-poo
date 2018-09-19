@@ -1,7 +1,7 @@
 
 # SOKOBAN vs POO / Partie 5 : physique et partie
 
-v0.0.1
+v0.0.2
 
 ## INTRODUCTION
 
@@ -150,7 +150,7 @@ Je vous ai donner cette simplification car nous pouvons l'utiliser à deux repris
         return aReplacedSprites;
     }
 
-Remarque : une optimisation est facultative mais possible, en effet nous n'avons pas besoin du couple de coordonnées X1, Y1, il peut donc être supprimer. Il s'agit d'une erreur de ma part, j'ai oublié de le supprimer dès la partie 1.
+Remarque : une optimisation est facultative mais possible, en effet nous n'avons pas besoin du couple de coordonnées X1, Y1, il peut donc être supprimer. Il s'agit d'une erreur de ma part, j'ai oublié de le supprimer dès la partie 1 de ce tutoriel.
 
 Il nous reste plus qu'à connecter les deux méthodes que l'on vient d'écrire au déplacement. Nous allons nous servir du déplacement vers le haut pour notre exemple, voici le pseudo code avec la contrainte de déplacement d'une caisse :
 
@@ -177,37 +177,37 @@ Il nous reste plus qu'à connecter les deux méthodes que l'on vient d'écrire au d
 
 Voici le code de la méthode goUp modifier avec la contrainte de déplacement d'une caisse :
 
-void CharacterController::goUp() {
-  // calcul de la nouvelle position
-  character->goUp();
-  // récupérer la tuile de la nouvelle position
-  char newTypeOfSprites = mapModel->getTypeOfSprites(character->getNextPos()[0], character->getNextPos()[1]);
-  // si la nouvelle position du personnage est sur la carte et que ce n'est pas un mur
-  if(character->getNextPos()[1] >= 0 && !isWall(newTypeOfSprites)) {
-    // déplacer une caisse
-    if(isBox(newTypeOfSprites)) {
-      newTypeOfSprites = moveBox(newTypeOfSprites, character->getNextPos()[0], character->getNextPos()[1], character->getNextPos()[0], character->getNextPos()[1] - 1);
-    } else {
-      stopMove = false;
+    void CharacterController::goUp() {
+        // calcul de la nouvelle position
+        character->goUp();
+        // récupérer la tuile de la nouvelle position
+        char newTypeOfSprites = mapModel->getTypeOfSprites(character->getNextPos()[0], character->getNextPos()[1]);
+        // si la nouvelle position du personnage est sur la carte et que ce n'est pas un mur
+        if(character->getNextPos()[1] >= 0 && !isWall(newTypeOfSprites)) {
+            // déplacer une caisse
+            if(isBox(newTypeOfSprites)) {
+                newTypeOfSprites = moveBox(newTypeOfSprites, character->getNextPos()[0], character->getNextPos()[1], character->getNextPos()[0], character->getNextPos()[1] - 1);
+            } else {
+                stopMove = false;
+            }
+    
+            if(!stopMove) {
+                // écraser nouvelle position par la tuile du joueur
+                mapModel->setTypeOfSprites(character->getNextPos()[0], character->getNextPos()[1], getPlayerSprites(newTypeOfSprites));
+                // remplacer ancienne position par la tuile qui était à cette position précédement
+                mapModel->setTypeOfSprites(character->getX(), character->getY(), character->getOldTypeOfSprites());
+                // stocker la tuile de la nouvelle position
+                character->setOldTypeOfSprites(newTypeOfSprites);
+                // mettre à jour la position
+                character->updatePositions();
+            } else {
+                 character->resetNextPositions();
+            }
+        } else {
+            // remettre à zéro la position suivante
+            character->resetNextPositions();
+        }
     }
-
-    if(!stopMove) {
-      // écraser nouvelle position par la tuile du joueur
-      mapModel->setTypeOfSprites(character->getNextPos()[0], character->getNextPos()[1], getPlayerSprites(newTypeOfSprites));
-      // remplacer ancienne position par la tuile qui était à cette position précédement
-      mapModel->setTypeOfSprites(character->getX(), character->getY(), character->getOldTypeOfSprites());
-      // stocker la tuile de la nouvelle position
-      character->setOldTypeOfSprites(newTypeOfSprites);
-      // mettre à jour la position
-      character->updatePositions();
-    } else {
-      character->resetNextPositions();
-    }
-  } else {
-    // remettre à zéro la position suivante
-    character->resetNextPositions();
-  }
-}
 
 Le code pour les autres directions est similaire, à l'exception des coordonnées X2, Y2 passé à moveBox qu'il faut adapter, voyons cela.
 
