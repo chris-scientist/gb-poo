@@ -10,14 +10,6 @@ MapView::MapView(MapModel *aMapModel) : mapModel(aMapModel) {
 
 // Dessiner la carte
 void MapView::paint(const int* aCameraPos) const {
-  //gb.display.printf("Init pos %d,%d", mapModel->getPlayerPositions()[0], mapModel->getPlayerPositions()[1]);
-  /*gb.display.drawImage(0, 0, getSprites(TypeOfSprites::PLAYER_TYPE));
-  gb.display.drawImage(16, 0, getSprites(TypeOfSprites::WALL_TYPE));
-  gb.display.drawImage(32, 0, getSprites(TypeOfSprites::BOX_TYPE));
-  gb.display.drawImage(48, 0, getSprites(TypeOfSprites::DESTINATION_TYPE));
-  gb.display.drawImage(0, 16, getSprites(TypeOfSprites::PLAYER_ON_ZONE_TYPE));
-  gb.display.drawImage(16, 16, getSprites(TypeOfSprites::FLOOR_TYPE));
-  gb.display.drawImage(32, 16, getSprites(TypeOfSprites::BOX_ON_ZONE_TYPE));*/
   int l = 0;
   for(int y = aCameraPos[1] ; y < aCameraPos[3] ; y++) {
     int c = 0;

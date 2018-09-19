@@ -18,3 +18,8 @@ void MapController::paint(const int* aCameraPos) const {
   view->paint(aCameraPos);
 }
 
+// Déterminer si le jeu est terminée
+bool MapController::isEndOfGame() const {
+  return model->isFinish();
+}
+

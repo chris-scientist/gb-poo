@@ -23,6 +23,17 @@ void MapModel::initPlayerPositions() {
   }
 }
 
+// Déterminer si la partie est finie ou non
+bool MapModel::isFinish() const {
+  bool isEnd = true;
+  for(int y=0 ; y < HEIGHT_MAP && isEnd ; y++) {
+    for(int x=0 ; x < WIDTH_MAP && isEnd ; x++) {
+      isEnd = isEnd && !(mapOfGame[y][x] == TypeOfSprites::DESTINATION_TYPE || mapOfGame[y][x] == TypeOfSprites::BOX_TYPE);
+    }
+  }
+  return isEnd;
+}
+
 // Récupérer la positions du joueur
 const int* MapModel::getPlayerPositions() const {
   return playerPositions;
