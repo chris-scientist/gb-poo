@@ -1,7 +1,7 @@
 
 # SOKOBAN vs POO / Partie 5 : physique et partie
 
-v0.2.1
+v0.2.2
 
 ## INTRODUCTION
 
@@ -284,4 +284,4 @@ Cette partie était la dernière du tutoriel. Vous pouvez télécharger le [code sou
 
 ### Aller plus loin
 
-Avant de partir, et si vous voulez voir une autre appoche du MVC, je vous conseille fortement de lire l'excellent tutoriel de [steph](https://gamebuino.com/@steph) sur le jeu de la vie disponible [ici](https://gamebuino.com/creations/game-of-life). Le tutoriel présente le jeu selon différentes approches : une approche fonctionnelle jusqu'au MVC en passant par une version purement objet. De plus, il a ajouté, toujours dans ce tutoriel, des interactions avec les LEDs ainsi que des effets sonores.
+Avant de partir, et si vous voulez voir une autre approche du MVC, je vous conseille fortement de lire l'excellent tutoriel de [steph](https://gamebuino.com/@steph) sur le jeu de la vie disponible [ici](https://gamebuino.com/creations/game-of-life). Le tutoriel présente le jeu selon différentes approches : une approche fonctionnelle jusqu'au MVC en passant par une version purement objet. De plus, il a ajouté, toujours dans ce tutoriel, des interactions avec les LEDs ainsi que des effets sonores.
