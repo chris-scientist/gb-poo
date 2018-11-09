@@ -1,7 +1,7 @@
 
 # SOKOBAN vs POO / Partie 5 : physique et partie
 
-v0.1.0
+v0.2.0
 
 ## INTRODUCTION
 
@@ -280,4 +280,8 @@ Votre jeu est maintenant complétement jouable, amusez vous bien !
 
 ## CONCLUSION
 
-Cette partie était la dernière du tutoriel. Vous pouvez télécharger le [code source final](https://github.com/chris-scientist/gb-poo/archive/v5.0.0.zip). Le jeu est jouable mais également améliorable. En effet il pourrait être intéressant de pouvoir recommencer la partie (sans avoir à quitter le jeu), ou bien avoir plusieurs cartes, etc. Mais le but de ce tutoriel était de proposer une initiation à la programmation orienté objet et au modèle d'architecture Modèle Vue Contrôleur, j'espère que ce tutoriel vous servira dans vos prochaine créations. Le découpage de ce tutoriel n'est pas anodin, effectivement nous avons développer chacune des briques de notre jeu pas à pas, bloc de fonctionnalités après bloc, et c'est comme cela que vous devez concevoir vos jeux. Enfin comme les autres parties n'hésitez pas à me donner votre avis.
+Cette partie était la dernière du tutoriel. Vous pouvez télécharger le [code source final](https://github.com/chris-scientist/gb-poo/archive/v5.0.0.zip). Le jeu est jouable mais également améliorable. En effet il pourrait être intéressant de pouvoir recommencer la partie (sans avoir à quitter le jeu), ou bien avoir plusieurs cartes, etc. Mais le but de ce tutoriel était de proposer une initiation à la programmation orienté objet et au modèle d'architecture Modèle Vue Contrôleur (MVC), j'espère que ce tutoriel vous servira dans vos prochaine créations. Le découpage de ce tutoriel n'est pas anodin, effectivement nous avons développer chacune des briques de notre jeu pas à pas, bloc de fonctionnalités après bloc, et c'est comme cela que vous devez concevoir vos jeux. Enfin comme les autres parties n'hésitez pas à me donner votre avis.
+
+### Aller plus loin
+
+Avant de partir, et si vous voulez voir une autre appoche du MVC, je vous conseille fortement de lire le tutoriel de [steph](https://gamebuino.com/@steph) sur le jeu de la vie disponible [ici](https://gamebuino.com/creations/game-of-life). Le tutoriel présente le jeu selon différentes approches : une approche fonctionnelle jusqu'au MVC en passant par une version purement objet. De plus, il a ajouté, toujours dans ce tutoriel, des interactions avec les LEDs ainsi que des effets sonores.
